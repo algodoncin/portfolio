@@ -1,0 +1,162 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Card from '../components/Card.astro';
+---
+
+<Layout title="Portfolio - Diego Arévalo">
+	<main>
+		<div class="container">
+			<div class="left">
+				<div class="img"></div>
+				<div class="name">
+					<h2>Diego Francisco Arévalo Miranda</h2>
+					<span class="sd">Software Developer</span>
+				</div>
+				
+			</div>	
+			<div class="link-card-grid right">
+				
+				<p class="me">
+					I'm a 20 year old developer who is currently studing a Software Develoment career at ESEN. My leadership and problem solving abilities make me a high valuable member on every project. I appreciate the feedback I receive from my teammates and superiors and I use that information to improve on the areas where I'm wobbling.
+				</p>
+				
+			</div>
+			
+		</div>
+		<hr class="line2">
+		<h1>Projects</h1>
+		<div class="content">
+			<div class="back">
+				<h2>Backend</h2>
+				<div class="card">
+					<Card
+					href="https://proyecto-final-ufds.vercel.app/"
+					title="Web App with Vue.js and Express.js"
+					body="Social media-like application to manage notebooks written on markdown."
+					/>
+				</div>
+			</div>
+			<hr class="line">
+			<div class="front">
+				<h2>Frontend</h2>
+				<div class="card">
+					<Card
+					href="https://ora-idesians.netlify.app"
+					title="Static page with Astro.js"
+					body="Electronic paper made for the college article titled `The meaning of time`."
+					/>
+				</div>
+			</div>
+		</div>
+		
+	</main>
+</Layout>
+
+<style>
+	main {
+		padding: 1rem;
+		color: white;
+		/* font-size: 18px; */
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		flex-direction: column;
+	}
+
+	h1 {
+		font-size: 3.5rem;
+		font-weight: 700;
+		line-height: 1;
+		text-align: center;
+		margin-bottom: 1em;
+	}
+
+	.line2{
+		width: 80%;
+	}
+
+	.name{
+		text-align: center;
+		margin: 10px 0px 10px 0px;
+	}
+
+	.name h2{
+		margin: 0;
+	}
+
+	.me{
+		text-align: justify;
+		width: 85%;
+		font-size: 20px;
+		/* margin: auto; */
+	}
+
+	.img{
+		width: 300px;
+		height: 300px;
+		background-color: gray;
+		border-radius: 50%;
+		margin: auto;
+		/* margin-top: 20px; */
+		background-image: url(/WhatsApp\ Image\ 2024-04-10\ at\ 20.27.55_0d705d01.jpg);
+		background-size: cover
+	}
+
+	.container{
+		display: flex;
+		justify-content: center;
+		/* border: 1px solid white; */
+		width: 80%;
+	}
+
+	.container .left{
+		width: 35%;
+		/* border: 1px solid red; */
+	}
+	.container .right{
+		width: 65%;
+		/* border: 1px solid blue; */
+		align-items: center;
+		display: flex;
+	}
+
+	.container .right {
+		display: flex;
+		flex-direction: column;
+		justify-content: space-around;
+	}
+	.container .right .front,
+	.container .right .back{
+		margin: 20px 10px 20px 10px;
+	} 
+
+	.content{
+		/* border: 1px solid green; */
+		display: flex;
+		width: 80%;
+		justify-content: center;
+		padding: 10px;
+	}
+
+	.content .back{
+		width: 60%; 
+		/* border: 1px solid purple; */
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+	}
+
+	.content .front{
+		width: 60%;
+		/* border: 1px solid yellow; */
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+	}
+
+	.card{
+		width: 70%;
+		margin-bottom: 20px;
+	}
+	
+</style>
